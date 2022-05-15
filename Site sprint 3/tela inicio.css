@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: auto;
+    
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: green;
+    height: 12vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.cabecalho-logo{
+    height: 13vh;
+    cursor: pointer;
+    position: relative;
+    right: 20%;
+    top: -5%;
+    left: 30%;
+}
+
+.cabecalho-logo:hover {
+    transform: scale(1.05);
+}
+
+.cabecalho-menu{
+    display: flex;
+    gap: 32px;
+
+}
+
+.cabecalho-menu-item{
+    font-family: 'koulen', cursive;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px  30px 10px 0;
+    text-decoration: solid white
+}
+
+.conteudo{
+    margin-bottom: 48px;
+}
+
+section.conteudo-tela-inicial{
+    margin-top: 20px;
+}
+
+.conteudo-tela-inicial{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 20px;
+    height: 100vh;
+
+}
+
+.conteudo-tela-inicial-escrito{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 30px;
+
+}
