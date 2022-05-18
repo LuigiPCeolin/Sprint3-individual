@@ -10,7 +10,7 @@
 }
 
 body{
-    background-image: url(allianz-palmeiras.jpg);
+    background-image: url(mancha-verde.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -102,7 +102,7 @@ section.conteudo-tela-inicial{
     cursor: pointer;
 }
 .conteudo-tela-inicial-escrito-botao:hover{
-    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .rodape{

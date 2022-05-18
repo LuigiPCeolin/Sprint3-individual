@@ -11,8 +11,7 @@ body{
 }
 .titulo{
     font-size: 30px;
-    display: flex;
-    
+    display: flex;  
     padding-left: 475px;
     
 }
@@ -22,6 +21,8 @@ body{
     padding: 40px 0;
     width: 1000px;
     box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.821);
+    border-radius: 50px;
 }
 .timeline:before{
     content: '';
@@ -57,6 +58,8 @@ body{
 .content{
     padding-bottom: 20px;
 }
+    
+
 .timeline ul li:nth-child(odd):before{
     content: '';
     position: absolute;
@@ -64,7 +67,7 @@ body{
     right: -6px;
     width: 10px;
     height: 10px;
-    background: white;
+    background: rgb(1, 68, 1);
     border-radius: 50%;
     box-shadow: 0 0 3px rgba(233, 33, 99, 0.2);
 }
@@ -75,7 +78,7 @@ body{
     left: -6px;
     width: 10px;
     height: 10px;
-    background: white;
+    background: rgb(1, 68, 1);
     border-radius: 50%;
     box-shadow: 0 0 3px rgba(233, 33, 99, 0.2);
 }
@@ -83,7 +86,7 @@ body{
 margin: 0;
 padding: 0;
 font-weight: 600;
-color: white;
+color: rgb(1, 68, 1);
 }
 .timeline ul li p{
     margin: 10px 0 0;
@@ -118,12 +121,11 @@ color: white;
     box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.3);
 }
 .rodape{
-    padding: 32px;
-    border-top: 0.4px solid rgb(1, 68, 1);
+    padding: -30px;
+    border-top: 0.4px solid #fff;
     display: flex;
     flex-direction: column;
-    background-color: white;
-    
+    background-color: rgba(255, 255, 255, 0.816);
 }
 .rodape-conteudo {
     display: flex;
