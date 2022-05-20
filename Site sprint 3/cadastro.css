@@ -1,16 +1,157 @@
-body{
-    display: flex;
+.toda-tela {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-.container{
-    background-color: rgba(1, 68, 1);
-    border-radius: 16px;
-    font-size: 20px;
-    padding: 50px;
+body{
+    font-size: 100%;
+    background: linear-gradient(68.15deg, rgb(1, 68, 1), #2e5600, rgb(2, 156, 28), rgb(57, 175, 57)) no-repeat;
+    background-size: 300% 300%;
+    animation: gradient 10s ease alternate infinite;
 }
-.formulario{
-    
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+.titulo{
+    color: white;
+    font-size: 40px;
+    padding-left: 38%;
+}
+.alerta_erro {
+    display: flex;
+    justify-content: flex-end;
+}
+.card_erro {
+    display: none;
+    background-color: #fff;
+    color: black;
+    width: 20px;
+    position: fixed;
+    border-radius: 4px;
+    border: #e6005a 3px solid;
+    padding: 0px;
+    margin-right: 10%;
+}
+.card.medio {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 15px;
+    width: 350px;
+    background-color: rgba(155, 154, 154, 0.422);
+    position: relative;
+    left: 38%;
+    height: 500px;
+}
+.card.medio:hover{
+    transform: scale(1.01);
+}
+.formulario .tipo_campo {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 600 !important;
+}
+input {
+    margin-bottom: 10px;
+    border: 2px solid #f9fafa;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.btn {
+    position: relative;
+    left: 15%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: "Barlow", sans-serif;
+    border: 0;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 15px;
+    color: white;
+    background-color: rgb(1, 68, 1);
+    width: 120px;
+    align-self: center;
+    margin-top: 5px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.rodape {
+    padding: 5px;
+    border-top: 0.4px solid #fff;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(57, 57, 57, 0.363);
+
+}
+
+.rodape-conteudo {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    justify-content: space-around;
+}
+
+.rodape-conteudo-barra {
+    margin-top: 5px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 3px;
+}
+
+.rodape-conteudo-titulo {
+    font-weight: bold;
+    color: white;
+    font-size: 24px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rodape-conteudo-sessao {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.rodape-direito {
+    padding-top: 50px;
+}
+
+.rodape-conteudo-ancora {
+    padding-top: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.rodape-imagem {
+    height: 48px;
+    align-self: center;
+    display: block;
+    margin: auto;
+}
+
+.rodape-conteudo-imagem p {
+    font-style: italic;
+    display: flex;
 }

@@ -16,6 +16,14 @@
 
 <body>
 
+     <!--Header-->
+
+     <div class="toda-tela">
+        <div class="conteudo">
+            <h1 class="titulo">Faça seu cadastro aqui!!!</h1>
+            
+        </div>
+    </div>
   
 
     <div class="banner ">
@@ -26,7 +34,7 @@
         </div>
         <div class="container ">
             <div class="card medio">
-                <h2>Bem-vindo!</h2>
+                <h2>O maior campeão do Brasil!</h2>
                 <div class="formulario">
 
                     <span class="tipo_campo">Nome completo:</span>
@@ -35,13 +43,10 @@
                     <span class="tipo_campo">Email:</span>
                     <input id="email_input" type="text" placeholder="Maior@vencedor.com">
 
-                    <span class="tipo_campo">Número telefone:</span>
-                    <input id="numero_input" type="text" placeholder="(11) 9965849943">
-
                     <span class="tipo_campo">Senha:</span>
                     <input id="senha_input" type="password" placeholder="******">
 
-                    <a href="login.html"><button class="btn" onclick="cadastrar()">Cadastrar</button></a>
+                    <button class="btn" onclick="cadastrar()">Cadastrar</button>
 
                 </div>
 
@@ -64,7 +69,7 @@
 
             <div class="rodape-conteudo-imagem">
                 <a href="Tela inicio.html"><img class="rodape-imagem" src="logo-palmeiras.png"></a>
-                <p class="rodape-direito">© 2022 Todos os direitos reservados | Palmeiras.</p>
+                <p class="rodape-direito">© #MAIORCAMPEAODOBRASIL | Palmeiras.</p>
             </div>
 
             <div class="rodape-conteudo-sessao">
@@ -94,10 +99,9 @@
 
         var nomeVar = nome_input.value;
         var emailVar = email_input.value;
-        var numeroVar = numero_input.value;
         var senhaVar = senha_input.value;
 
-        if (nomeVar == "" || emailVar == "" || numeroVar == "" || senhaVar == "") {
+        if (nomeVar == "" || emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
             alert(`Preencha todos os campos para prosseguir!`)
 
@@ -127,7 +131,6 @@
             body: JSON.stringify({
                 nomeServer: nomeVar,
                 emailServer: emailVar,
-                numeroServer: numeroVar,
                 senhaServer: senhaVar
             })
         }).then(function (resposta) {

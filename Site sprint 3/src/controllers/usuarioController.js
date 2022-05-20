@@ -25,14 +25,14 @@ function listar(req, res) {
 }
 
 function entrar(req, res) {
+    var nome = req.body.nomeServer;
     var email = req.body.emailServer;
-    var cpf = req.body.cpfServer;
     var senha = req.body.senhaServer;
 
-    if (email == undefined) {
+    if (nome == undefined) {
+        res.status(400).send("Seu nome está undefined!");
+    } else if (email == undefined){
         res.status(400).send("Seu email está undefined!");
-    } else if (cpf == undefined){
-        res.status(400).send("Seu cpf está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está indefinida!");
     } else {
@@ -40,7 +40,7 @@ function entrar(req, res) {
         usuarioModel.entrar(email, senha)
             .then(
                 function (resultado) {
-                    console.log(`\nResultados encontrados: ${resultado.length}`);
+                    console.log(`Resultados encontrados: ${resultado.length}`);
                     console.log(`Resultados: ${JSON.stringify(resultado)}`); // transforma JSON em String
 
                     if (resultado.length == 1) {
@@ -66,20 +66,17 @@ function entrar(req, res) {
 function cadastrar(req, res) {
     var nome = req.body.nomeServer;
     var email = req.body.emailServer;
-    var cpf = req.body.cpfServer;
     var senha = req.body.senhaServer;
 
     if (nome == undefined) {
         res.status(400).send("Seu nome está undefined!");
     } else if (email == undefined) {
         res.status(400).send("Seu email está undefined!");
-    } else if (cpf == undefined) {
-        res.status(400).send("Seu cpf está undefined");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
     } else {
         
-        usuarioModel.cadastrar(nome, email, cpf, senha)
+        usuarioModel.cadastrar(nome, email, numero, senha)
             .then(
                 function (resultado) {
                     res.json(resultado);
